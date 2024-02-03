@@ -49,6 +49,12 @@ class TransparentBlurViewHelper: UIVisualEffectView {
 //        
 //    }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        //
+    }
+    
+    
+    
 }
 
 #Preview {
