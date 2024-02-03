@@ -77,13 +77,15 @@ struct Home: View {
             .background {
                 TransparentBlurView(removeAllFilters: true)
                     .blur(radius: 9.0, opaque: true)
-                    .background(.white.opacity(0.15))
+                    .background(.white.opacity(0.05)) // Adjust this according to your need to get that glassy effect.
             }
             .clipShape(.rect(cornerRadius: 10.0, style: .continuous))
+            // Light white border
             .background {
                 RoundedRectangle(cornerRadius: 10.0, style: .continuous)
-                    .stroke(.white.opacity(0.3), lineWidth: 2.0)
+                    .stroke(.white.opacity(0.3), lineWidth: 1.5)
             }
+            .shadow(color: .black.opacity(0.12), radius: 10.0)
             .padding(.horizontal, 40.0)
             .background {
                 ZStack {

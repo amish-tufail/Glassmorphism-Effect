@@ -10,25 +10,38 @@ import UIKit
 
 struct TransparentBlurView: UIViewRepresentable {
     var removeAllFilters: Bool = false
-    func makeUIView(context: Context) -> UIVisualEffectView {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterial))
-        return view
+    func makeUIView(context: Context) -> TransparentBlurViewHelper {
+       return TransparentBlurViewHelper(removeAllFilters: removeAllFilters)
     }
     
-    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-//        DispatchQueue.main.sync {
-            if let backDropLayer = uiView.layer.sublayers?.first {
-                if removeAllFilters {
-                    backDropLayer.filters = []
-                } else {
-                    // Removing All Expect Blur Effect
-                    backDropLayer.filters?.removeAll(where: { filter in
-                        String(describing: filter) != "gaussianBlur"
-                    })
-                }
-            }
-//        }
+    func updateUIView(_ uiView: TransparentBlurViewHelper, context: Context) {
+        
     }
+}
+
+class TransparentBlurViewHelper: UIVisualEffectView {
+    init(removeAllFilters: Bool) {
+        super.init(effect: UIBlurEffect(style: .systemUltraThinMaterial))
+        if subviews.indices.contains(1) {
+            subviews[1].alpha = 0
+        }
+        if let backDropLayer = layer.sublayers?.first {
+            if removeAllFilters {
+                backDropLayer.filters = []
+            } else {
+                // Removing All Expect Blur Effect
+                backDropLayer.filters?.removeAll(where: { filter in
+                    String(describing: filter) != "gaussianBlur"
+                })
+            }
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
 }
 
 #Preview {
