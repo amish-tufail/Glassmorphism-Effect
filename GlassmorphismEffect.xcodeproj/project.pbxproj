@@ -12,6 +12,7 @@
 		EE0826F62B6E2A51001585D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0826F52B6E2A51001585D4 /* Assets.xcassets */; };
 		EE0826F92B6E2A51001585D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0826F82B6E2A51001585D4 /* Preview Assets.xcassets */; };
 		EE0827002B6E2B50001585D4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0826FF2B6E2B50001585D4 /* Home.swift */; };
+		EE0827042B6E30ED001585D4 /* TransparentBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0827032B6E30ED001585D4 /* TransparentBlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		EE0826F52B6E2A51001585D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE0826F82B6E2A51001585D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE0826FF2B6E2B50001585D4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EE0827032B6E30ED001585D4 /* TransparentBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				EE0826F12B6E2A50001585D4 /* GlassmorphismEffectApp.swift */,
 				EE0826F32B6E2A50001585D4 /* ContentView.swift */,
 				EE0826FF2B6E2B50001585D4 /* Home.swift */,
+				EE0827032B6E30ED001585D4 /* TransparentBlurView.swift */,
 				EE0826F52B6E2A51001585D4 /* Assets.xcassets */,
 				EE0826F72B6E2A51001585D4 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				EE0826F42B6E2A50001585D4 /* ContentView.swift in Sources */,
 				EE0827002B6E2B50001585D4 /* Home.swift in Sources */,
+				EE0827042B6E30ED001585D4 /* TransparentBlurView.swift in Sources */,
 				EE0826F22B6E2A50001585D4 /* GlassmorphismEffectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

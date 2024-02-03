@@ -47,7 +47,10 @@ struct Home: View {
                             
                             .padding(.vertical, 10.0)
                             .frame(maxWidth: .infinity)
-                            .background(.white.opacity(0.2))
+                            .background {
+                                TransparentBlurView(removeAllFilters: true)
+                                    .background(.white.opacity(0.2))
+                            }
                             .clipShape(.rect(cornerRadius: 8.0, style: .continuous))
                     }
                     Button {
@@ -58,7 +61,10 @@ struct Home: View {
                             
                             .padding(.vertical, 10.0)
                             .frame(maxWidth: .infinity)
-                            .background(.white.opacity(0.2))
+                            .background {
+                                TransparentBlurView(removeAllFilters: true)
+                                    .background(.white.opacity(0.2))
+                            }
                             .clipShape(.rect(cornerRadius: 8.0, style: .continuous))
                     }
                 }
@@ -69,9 +75,32 @@ struct Home: View {
             .padding(.top, 35.0)
             .padding(.bottom, 25.0)
             .background {
-                
+                TransparentBlurView(removeAllFilters: true)
+                    .blur(radius: 9.0, opaque: true)
+                    .background(.white.opacity(0.15))
+            }
+            .clipShape(.rect(cornerRadius: 10.0, style: .continuous))
+            .background {
+                RoundedRectangle(cornerRadius: 10.0, style: .continuous)
+                    .stroke(.white.opacity(0.3), lineWidth: 2.0)
+            }
+            .padding(.horizontal, 40.0)
+            .background {
+                ZStack {
+                    Circle()
+                        .fill(.linearGradient(colors: [Color.cyan], startPoint: .top, endPoint: .bottom))
+                        .frame(width: 140.0, height: 140.0)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .offset(x: -25, y: -55)
+                    Circle()
+                        .fill(.linearGradient(colors: [Color.pink], startPoint: .top, endPoint: .bottom))
+                        .frame(width: 140.0, height: 140.0)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+                        .offset(x: 25, y: 55)
+                }
             }
         }
+        .frame(maxWidth: 390.0)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background {
                     Rectangle()
