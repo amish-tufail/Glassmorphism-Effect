@@ -47,6 +47,7 @@ struct Home: View {
                             
                             .padding(.vertical, 10.0)
                             .frame(maxWidth: .infinity)
+                        // Blur View usage
                             .background {
                                 TransparentBlurView(removeAllFilters: true)
                                     .background(.white.opacity(0.2))
@@ -61,6 +62,7 @@ struct Home: View {
                             
                             .padding(.vertical, 10.0)
                             .frame(maxWidth: .infinity)
+                        // Blur View usage
                             .background {
                                 TransparentBlurView(removeAllFilters: true)
                                     .background(.white.opacity(0.2))
@@ -88,7 +90,6 @@ struct Home: View {
                     .stroke(.white.opacity(0.3), lineWidth: 1.5)
             }
             .shadow(color: .black.opacity(0.12), radius: 10.0)
-           
             .padding(.horizontal, 40.0)
             .background {
                 ZStack {

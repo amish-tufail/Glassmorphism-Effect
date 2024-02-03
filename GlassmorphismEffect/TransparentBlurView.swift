@@ -15,7 +15,7 @@ struct TransparentBlurView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: TransparentBlurViewHelper, context: Context) {
-        
+        //
     }
 }
 
@@ -40,21 +40,9 @@ class TransparentBlurViewHelper: UIVisualEffectView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    @discardableResult @MainActor
-//    func registerForTraitChanges<TraitEnvironment>(
-//        _ traits: [UITrait],
-//        handler: @escaping TransparentBlurViewHelper.TraitChangeHandler<TraitEnvironment>
-//    ) -> any UITraitChangeRegistration where TraitEnvironment : UITraitEnvironment {
-//        
-//    }
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         //
     }
-    
-    
-    
 }
 
 #Preview {
