@@ -71,9 +71,11 @@ struct Home: View {
                 .foregroundStyle(.white)
                 .padding(.top, 15.0)
             }
+            .foregroundStyle(.white)
             .padding(.horizontal, 30.0)
             .padding(.top, 35.0)
             .padding(.bottom, 25.0)
+            // Blur View Start
             .background {
                 TransparentBlurView(removeAllFilters: true)
                     .blur(radius: 9.0, opaque: true)
@@ -86,6 +88,7 @@ struct Home: View {
                     .stroke(.white.opacity(0.3), lineWidth: 1.5)
             }
             .shadow(color: .black.opacity(0.12), radius: 10.0)
+           
             .padding(.horizontal, 40.0)
             .background {
                 ZStack {
@@ -101,6 +104,7 @@ struct Home: View {
                         .offset(x: 25, y: 55)
                 }
             }
+            // Blur View End
         }
         .frame(maxWidth: 390.0)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -122,6 +126,7 @@ extension Home {
                 TextField(hint, text: value)
             }
         }
+        .environment(\.colorScheme, .dark)
         .padding(.vertical, 10.0)
         .padding(.horizontal, 15.0)
         .background(.white.opacity(0.12))

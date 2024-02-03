@@ -41,6 +41,13 @@ class TransparentBlurViewHelper: UIVisualEffectView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    @discardableResult @MainActor
+//    func registerForTraitChanges<TraitEnvironment>(
+//        _ traits: [UITrait],
+//        handler: @escaping TransparentBlurViewHelper.TraitChangeHandler<TraitEnvironment>
+//    ) -> any UITraitChangeRegistration where TraitEnvironment : UITraitEnvironment {
+//        
+//    }
     
 }
 
